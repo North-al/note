@@ -40,11 +40,6 @@ const verifyUsername = /^[a-zA-Z0-9_]{5,10}$/
 const verifyPassword = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}$/
 ```
 
-## URL
-```js
-const verifyUrl = /^http[s]?:\/\/.*/ 
-```
-
 ## 16进制颜色
 ```js
 const verifyColor = /^#([0-9a-fA-F]{6}|[0-9a-fA-F]{3})$/
@@ -54,10 +49,7 @@ const verifyColor = /^#([0-9a-fA-F]{6}|[0-9a-fA-F]{3})$/
 ```js
 // yyyy-MM-dd
 const verifyDate = /^\d{4}-\d{1,2}-\d{1,2}$/
-```
 
-## 日期时间格式
-```js
 // yyyy-MM-dd HH:mm:ss
 const verifyDateTime = /^\d{4}-\d{1,2}-\d{1,2} \d{1,2}:\d{1,2}:\d{1,2}$/
 ```
@@ -145,5 +137,29 @@ const verifyNonNegativeFloat = /^[1-9]\d*\.\d*|0\.\d*[1-9]\d*|0?\.0+|0$/
 
 //匹配非正浮点数（负浮点数 + 0）
 const verifyNonPositiveFloat = /^(-([1-9]\d*\.\d*|0\.\d*[1-9]\d*))|0?\.0+|0$/
+```
+
+## 匹配HTML标签
+```js
+const verifyHtmlTag = /<(.*)>.*<\/\1>|<(.*) \/>/
+```
+
+## 匹配a标签href属性
+```js
+const verifyHref = /href=[\'\"]?([^\'\"]*)[\'\"]?/i
+```
+
+## URL
+```js
+const verifyUrl = /^http[s]?:\/\/.*/ 
+```
+## 匹配URL参数
+```js
+const verifyUrlParam = /([^?&=]+)=([^?&=]*)/g
+```
+
+## 验证码长度 4位
+```js
+const verifyCode = /^\d{4}$/
 ```
 
