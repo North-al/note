@@ -30,11 +30,19 @@ export default defineConfig({
 			{ text: 'CSS', link: '/css/' },
 			{ text: 'JavaScript', link: '/javaScript/' },
 			{ text: 'TypeScript', link: '/typeScript/' },
-			{ text: 'Vue', link: '/vue/' },
+			{ text: 'Vue', link: '/pages/vue/components/material-input' },
 			{ text: '工具函数', link: '/pages/utils/regexp/index' },
 			{ text: '项目配置', link: '/pages/config/eslint' }
 		],
 		sidebar: {
+			'/pages/vue/': [
+				{
+					text: 'vue组件',
+					collapsed: false,
+					collapsible: true,
+					items: [{ text: 'material-input', link: '/pages/vue/components/material-input' }]
+				}
+			],
 			'/pages/config/': [
 				{
 					text: 'eslint配置',
