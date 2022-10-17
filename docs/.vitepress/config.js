@@ -32,7 +32,7 @@ export default defineConfig({
 			{ text: 'TypeScript', link: '/typeScript/' },
 			{ text: 'Vue', link: '/pages/vue/components/material-input' },
 			{ text: '工具函数', link: '/pages/utils/regexp/index' },
-			{ text: '项目配置', link: '/pages/config/eslint' }
+			{ text: '项目配置', link: '/pages/config/eslint/vue2' }
 		],
 		sidebar: {
 			'/pages/vue/': [
@@ -45,12 +45,14 @@ export default defineConfig({
 			],
 			'/pages/config/': [
 				{
-					text: 'eslint配置',
-					collapsed: false, // 是否折叠
-					collapsible: true, // 是否显示折叠
+					text: '项目配置',
+					collapsed: false,
+					collapsible: true,
 					items: [
-						{ text: 'vue2版本', link: '/config/eslint-vue2' },
-						{ text: 'vue3版本', link: '/config/eslint-vue3' }
+						{ text: 'eslint-vue2', link: '/pages/config/eslint/vue2' },
+						{ text: 'eslint-vue3', link: '/pages/config/eslint/vue3' },
+						{ text: 'prettier', link: '/pages/config/prettier' },
+						{ text: 'editorconfig', link: '/pages/config/editorconfig' }
 					]
 				}
 			],
